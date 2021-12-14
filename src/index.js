@@ -7,6 +7,7 @@ var morgan = require("morgan");
 // const { extname } = require("path/posix");
 
 const app = express();
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(morgan("combined"));
 //đổi file .handlebars thành .hbs
